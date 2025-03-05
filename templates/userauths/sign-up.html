@@ -1,0 +1,246 @@
+{% extends 'partials/base.html' %} {% load static %} {% block content %}
+<div class="gray py-3">
+    <div class="container">
+        <div class="row">
+            <div class="colxl-12 col-lg-12 col-md-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'store:index' %}">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Create Account</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="middle">
+    <div class="container">
+        <div class="row align-items-start justify-content-center">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mfliud">
+                <h1 class="fw-bold mb-2">Sign Up <i class="fas fa-user-plus ms-2"></i></h1>
+                <p class="mb-3">Welcome to our store, create a free account today!</p>
+                <form class="border p-3 rounded" id="registrationForm" method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="form-group col-md-12 mb-4">
+                            <label>Full name *</label>
+                            {{form.full_name}}
+                            <div class="text-danger small" id="errorFullName"></div>
+                        </div>
+
+                        <div class="form-group col-md-12 mb-4">
+                            <label>Store Name (Please Only Input Store Name When Creating A Vendor Account)*</label>
+                            {{form.store_name}}
+                            <div class="text-danger small" id="errorStoreName"></div>
+                        </div>      
+
+                        <div class="form-group col-md-12 mb-4">
+                            <label>Email *</label>
+                            {{form.email}}
+                            <div class="text-danger small" id="errorEmail"></div>
+                        </div>
+
+                        <div class="form-group col-md-6 mb-4">
+                            <label>Mobile *</label>
+                            {{form.mobile}}
+                            <div class="text-danger small" id="errorMobile"></div>
+                        </div>
+
+                        <div class="form-group col-md-6 mb-4">
+                            <label>Password *</label>
+                            {{form.password1}}
+                        </div>
+
+                        <div class="form-group col-md-6 mb-4">
+                            <label>Confirm Password *</label>
+                            {{form.password2}}
+                            <div class="text-danger small" id="errorPassword"></div>
+                        </div>
+
+                        <div class="form-group col-md-6 mb-4">
+                            <label>Create Account As</label>
+                            {{form.user_type}}
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <p class="text-muted small text-secondary">
+                            By registering your details, you agree with our Terms & Conditions, <br />
+                            and Privacy and Cookie Policy.
+                        </p>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-md full-width bg-primary rounded text-light fs-md ft-medium">Sign Up <i class="fas fa-user-plus ms-1"></i></button>
+                    </div>
+
+                    <div class="mt-3">
+                        <a href="{% url 'userauths:sign-in' %}">Already have an account? Sign In</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.getElementById("registrationForm").addEventListener("submit", function (event) {
+        let isValid = true;
+
+        // Full name validation (only alphabets)
+        const fullName = document.querySelector("[name='full_name']").value;
+        const fullNameError = document.getElementById("errorFullName");
+        if (!/^[a-zA-Z\s]+$/.test(fullName)) {
+            fullNameError.textContent = "Full name can only contain alphabets.";
+            isValid = false;
+        } else {
+            fullNameError.textContent = "";
+        }
+
+        // Store name validation (vendor-only rule)
+        const userType = document.querySelector("[name='user_type']").value;
+        const storeName = document.querySelector("[name='store_name']").value;
+        const storeNameError = document.getElementById("errorStoreName");
+        if (userType === "customer" && storeName.trim() !== "") {
+            storeNameError.textContent = "Only vendors can input a store name.";
+            isValid = false;
+        } else {
+            storeNameError.textContent = "";
+        }
+
+        // Email validation
+        const email = document.querySelector("[name='email']").value;
+        const emailError = document.getElementById("errorEmail");
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            emailError.textContent = "Please enter a valid email address.";
+            isValid = false;
+        } else {
+            emailError.textContent = "";
+        }
+
+        // Mobile validation
+        const mobile = document.querySelector("[name='mobile']").value;
+        const mobileError = document.getElementById("errorMobile");
+        const validPrefixes = ["099", "077", "088", "076", "079", "075", "032", "031", "072", "074", "080", "030", "073"];
+        const isValidPrefix = validPrefixes.some(prefix => mobile.startsWith(prefix));
+        if (mobile.length !== 9 || !isValidPrefix) {
+            mobileError.textContent = "Invalid mobile number. Ensure it starts with a valid prefix and is 9 digits long.";
+            isValid = false;
+        } else {
+            mobileError.textContent = "";
+        }
+
+        // Password match validation
+        const password = document.querySelector("[name='password1']").value;
+        const confirmPassword = document.querySelector("[name='password2']").value;
+        const passwordError = document.getElementById("errorPassword");
+        if (password !== confirmPassword) {
+            passwordError.textContent = "Passwords do not match.";
+            isValid = false;
+        } else {
+            passwordError.textContent = "";
+        }
+
+        // Prevent form submission if validation fails
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+</script>
+{% endblock content %}
+
+
+
+{% comment %} {% extends 'partials/base.html' %} {% load static %} {% block content %}
+<div class="gray py-3">
+    <div class="container">
+        <div class="row">
+            <div class="colxl-12 col-lg-12 col-md-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'store:index' %}">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Create Account</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="middle">
+    <div class="container">
+        <div class="row align-items-start justify-content-center">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mfliud">
+                <h1 class="fw-bold mb-2">Sign Up <i class="fas fa-user-plus ms-2"></i></h1>
+                <p class="mb-3">Welcome to our store, create a free account today!</p>
+                <form class="border p-3 rounded" method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="form-group col-md-12 mb-4">
+                            <label>Full name *</label>
+                            {{form.full_name}}
+                        </div>
+                        
+
+                        <div class="form-group col-md-12 mb-4">
+                            <label>Store Name (Please Only Input Store Name When Creating A Vendor Account)*</label>
+                            <!--<input type="text" id="store_name" name="store_name" class="form-control" placeholder="Enter store name">-->
+                            {{form.store_name}}
+                        </div>      
+                        
+
+                        <div class="form-group col-md-12 mb-4">
+                            <label>Email *</label>
+                            {{form.email}}
+                        </div>
+
+                        <div class="form-group col-md-6 mb-4">
+                            <label>Mobile *</label>
+                            {{form.mobile}}
+                        </div>
+
+                        <div class="form-group col-md-6 mb-4">
+                            <label>Password *</label>
+                            {{form.password1}}
+                        </div>
+
+                        <div class="form-group col-md-6 mb-4">
+                            <label>Confirm Password *</label>
+                            {{form.password2}}
+                        </div>
+
+                        <div class="form-group col-md-6 mb-4">
+                            <label>Create Account As</label>
+                            {{form.user_type}}
+                        </div>
+                        <!--reCAPTCHA-->
+                        <!--
+                        <div class="form-group col-md-12 mb-4">
+                            <label>Captcha *</label>
+                            {{form.captcha}}
+                        </div> t
+                        -->
+                        
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <p class="text-muted small text-secondary">
+                            By registering your details, you agree with our Terms & Conditions, <br />
+                            and Privacy and Cookie Policy.
+                        </p>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-md full-width bg-primary rounded text-light fs-md ft-medium">Sign Up <i class="fas fa-user-plus ms-1"></i></button>
+                    </div>
+
+                    <div class="mt-3">
+                        <a href="{% url 'userauths:sign-in' %}">Already have an account? Sign In</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %} {% endcomment %}
