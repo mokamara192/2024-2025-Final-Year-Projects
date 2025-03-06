@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="View_TransferOfficesLinkDataSet" targetNamespace="http://tempuri.org/View_TransferOfficesLinkDataSet.xsd" xmlns:mstns="http://tempuri.org/View_TransferOfficesLinkDataSet.xsd" xmlns="http://tempuri.org/View_TransferOfficesLinkDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="HouseofElectronicsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HouseofElectronicsConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HOEDebtMaster.My.MySettings.GlobalReference.Default.HouseofElectronicsConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_TransferOfficesLinkTableAdapter" GeneratorDataComponentClassName="View_TransferOfficesLinkTableAdapter" Name="View_TransferOfficesLink" UserDataComponentName="View_TransferOfficesLinkTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HouseofElectronicsConnectionString (MySettings)" DbObjectName="HouseofElectronics.dbo.View_TransferOfficesLink" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM View_TransferOfficesLink</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TransferOfficeID" DataSetColumn="TransferOfficeID" />
+              <Mapping SourceColumn="OfficeID" DataSetColumn="OfficeID" />
+              <Mapping SourceColumn="GeneratedTransferNo" DataSetColumn="GeneratedTransferNo" />
+              <Mapping SourceColumn="NameOfOffice" DataSetColumn="NameOfOffice" />
+              <Mapping SourceColumn="ResidentialAddress" DataSetColumn="ResidentialAddress" />
+              <Mapping SourceColumn="PhoneNo" DataSetColumn="PhoneNo" />
+              <Mapping SourceColumn="EmailAddress" DataSetColumn="EmailAddress" />
+              <Mapping SourceColumn="Occupation" DataSetColumn="Occupation" />
+              <Mapping SourceColumn="OfficeOfWork" DataSetColumn="OfficeOfWork" />
+              <Mapping SourceColumn="WorkAddress" DataSetColumn="WorkAddress" />
+              <Mapping SourceColumn="IdentificationType" DataSetColumn="IdentificationType" />
+              <Mapping SourceColumn="IdentificationNo" DataSetColumn="IdentificationNo" />
+              <Mapping SourceColumn="TransferNo" DataSetColumn="TransferNo" />
+              <Mapping SourceColumn="TransferType" DataSetColumn="TransferType" />
+              <Mapping SourceColumn="TransferDate" DataSetColumn="TransferDate" />
+              <Mapping SourceColumn="TransferStatus" DataSetColumn="TransferStatus" />
+              <Mapping SourceColumn="Currency" DataSetColumn="Currency" />
+              <Mapping SourceColumn="ExchangeRate" DataSetColumn="ExchangeRate" />
+              <Mapping SourceColumn="AccountNo" DataSetColumn="AccountNo" />
+              <Mapping SourceColumn="ItemID" DataSetColumn="ItemID" />
+              <Mapping SourceColumn="NameOfItem" DataSetColumn="NameOfItem" />
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+              <Mapping SourceColumn="UnitCost" DataSetColumn="UnitCost" />
+              <Mapping SourceColumn="TotalCost" DataSetColumn="TotalCost" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="View_TransferOfficesLinkDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="View_TransferOfficesLinkDataSet" msprop:Generator_UserDSName="View_TransferOfficesLinkDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_TransferOfficesLink" msprop:Generator_TableClassName="View_TransferOfficesLinkDataTable" msprop:Generator_TableVarName="tableView_TransferOfficesLink" msprop:Generator_RowChangedName="View_TransferOfficesLinkRowChanged" msprop:Generator_TablePropName="View_TransferOfficesLink" msprop:Generator_RowDeletingName="View_TransferOfficesLinkRowDeleting" msprop:Generator_RowChangingName="View_TransferOfficesLinkRowChanging" msprop:Generator_RowEvHandlerName="View_TransferOfficesLinkRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TransferOfficesLinkRowDeleted" msprop:Generator_RowClassName="View_TransferOfficesLinkRow" msprop:Generator_UserTableName="View_TransferOfficesLink" msprop:Generator_RowEvArgName="View_TransferOfficesLinkRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransferOfficeID" msprop:Generator_ColumnVarNameInTable="columnTransferOfficeID" msprop:Generator_ColumnPropNameInRow="TransferOfficeID" msprop:Generator_ColumnPropNameInTable="TransferOfficeIDColumn" msprop:Generator_UserColumnName="TransferOfficeID" type="xs:int" />
+              <xs:element name="OfficeID" msprop:Generator_ColumnVarNameInTable="columnOfficeID" msprop:Generator_ColumnPropNameInRow="OfficeID" msprop:Generator_ColumnPropNameInTable="OfficeIDColumn" msprop:Generator_UserColumnName="OfficeID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GeneratedTransferNo" msprop:Generator_ColumnVarNameInTable="columnGeneratedTransferNo" msprop:Generator_ColumnPropNameInRow="GeneratedTransferNo" msprop:Generator_ColumnPropNameInTable="GeneratedTransferNoColumn" msprop:Generator_UserColumnName="GeneratedTransferNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NameOfOffice" msprop:Generator_ColumnVarNameInTable="columnNameOfOffice" msprop:Generator_ColumnPropNameInRow="NameOfOffice" msprop:Generator_ColumnPropNameInTable="NameOfOfficeColumn" msprop:Generator_UserColumnName="NameOfOffice">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ResidentialAddress" msprop:Generator_ColumnVarNameInTable="columnResidentialAddress" msprop:Generator_ColumnPropNameInRow="ResidentialAddress" msprop:Generator_ColumnPropNameInTable="ResidentialAddressColumn" msprop:Generator_UserColumnName="ResidentialAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PhoneNo" msprop:Generator_ColumnVarNameInTable="columnPhoneNo" msprop:Generator_ColumnPropNameInRow="PhoneNo" msprop:Generator_ColumnPropNameInTable="PhoneNoColumn" msprop:Generator_UserColumnName="PhoneNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmailAddress" msprop:Generator_ColumnVarNameInTable="columnEmailAddress" msprop:Generator_ColumnPropNameInRow="EmailAddress" msprop:Generator_ColumnPropNameInTable="EmailAddressColumn" msprop:Generator_UserColumnName="EmailAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Occupation" msprop:Generator_ColumnVarNameInTable="columnOccupation" msprop:Generator_ColumnPropNameInRow="Occupation" msprop:Generator_ColumnPropNameInTable="OccupationColumn" msprop:Generator_UserColumnName="Occupation">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OfficeOfWork" msprop:Generator_ColumnVarNameInTable="columnOfficeOfWork" msprop:Generator_ColumnPropNameInRow="OfficeOfWork" msprop:Generator_ColumnPropNameInTable="OfficeOfWorkColumn" msprop:Generator_UserColumnName="OfficeOfWork">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WorkAddress" msprop:Generator_ColumnVarNameInTable="columnWorkAddress" msprop:Generator_ColumnPropNameInRow="WorkAddress" msprop:Generator_ColumnPropNameInTable="WorkAddressColumn" msprop:Generator_UserColumnName="WorkAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdentificationType" msprop:Generator_ColumnVarNameInTable="columnIdentificationType" msprop:Generator_ColumnPropNameInRow="IdentificationType" msprop:Generator_ColumnPropNameInTable="IdentificationTypeColumn" msprop:Generator_UserColumnName="IdentificationType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdentificationNo" msprop:Generator_ColumnVarNameInTable="columnIdentificationNo" msprop:Generator_ColumnPropNameInRow="IdentificationNo" msprop:Generator_ColumnPropNameInTable="IdentificationNoColumn" msprop:Generator_UserColumnName="IdentificationNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransferNo" msprop:Generator_ColumnVarNameInTable="columnTransferNo" msprop:Generator_ColumnPropNameInRow="TransferNo" msprop:Generator_ColumnPropNameInTable="TransferNoColumn" msprop:Generator_UserColumnName="TransferNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransferType" msprop:Generator_ColumnVarNameInTable="columnTransferType" msprop:Generator_ColumnPropNameInRow="TransferType" msprop:Generator_ColumnPropNameInTable="TransferTypeColumn" msprop:Generator_UserColumnName="TransferType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransferDate" msprop:Generator_ColumnVarNameInTable="columnTransferDate" msprop:Generator_ColumnPropNameInRow="TransferDate" msprop:Generator_ColumnPropNameInTable="TransferDateColumn" msprop:Generator_UserColumnName="TransferDate" type="xs:dateTime" />
+              <xs:element name="TransferStatus" msprop:Generator_ColumnVarNameInTable="columnTransferStatus" msprop:Generator_ColumnPropNameInRow="TransferStatus" msprop:Generator_ColumnPropNameInTable="TransferStatusColumn" msprop:Generator_UserColumnName="TransferStatus">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Currency" msprop:Generator_ColumnVarNameInTable="columnCurrency" msprop:Generator_ColumnPropNameInRow="Currency" msprop:Generator_ColumnPropNameInTable="CurrencyColumn" msprop:Generator_UserColumnName="Currency">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExchangeRate" msprop:Generator_ColumnVarNameInTable="columnExchangeRate" msprop:Generator_ColumnPropNameInRow="ExchangeRate" msprop:Generator_ColumnPropNameInTable="ExchangeRateColumn" msprop:Generator_UserColumnName="ExchangeRate" type="xs:decimal" />
+              <xs:element name="AccountNo" msprop:Generator_ColumnVarNameInTable="columnAccountNo" msprop:Generator_ColumnPropNameInRow="AccountNo" msprop:Generator_ColumnPropNameInTable="AccountNoColumn" msprop:Generator_UserColumnName="AccountNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemID" msprop:Generator_ColumnVarNameInTable="columnItemID" msprop:Generator_ColumnPropNameInRow="ItemID" msprop:Generator_ColumnPropNameInTable="ItemIDColumn" msprop:Generator_UserColumnName="ItemID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NameOfItem" msprop:Generator_ColumnVarNameInTable="columnNameOfItem" msprop:Generator_ColumnPropNameInRow="NameOfItem" msprop:Generator_ColumnPropNameInTable="NameOfItemColumn" msprop:Generator_UserColumnName="NameOfItem">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:int" />
+              <xs:element name="UnitCost" msprop:Generator_ColumnVarNameInTable="columnUnitCost" msprop:Generator_ColumnPropNameInRow="UnitCost" msprop:Generator_ColumnPropNameInTable="UnitCostColumn" msprop:Generator_UserColumnName="UnitCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalCost" msprop:Generator_ColumnVarNameInTable="columnTotalCost" msprop:Generator_ColumnPropNameInRow="TotalCost" msprop:Generator_ColumnPropNameInTable="TotalCostColumn" msprop:Generator_UserColumnName="TotalCost" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

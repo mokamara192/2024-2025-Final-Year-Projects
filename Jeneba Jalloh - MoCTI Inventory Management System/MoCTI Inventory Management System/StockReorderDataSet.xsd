@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="StockReorderDataSet" targetNamespace="http://tempuri.org/StockReorderDataSet.xsd" xmlns:mstns="http://tempuri.org/StockReorderDataSet.xsd" xmlns="http://tempuri.org/StockReorderDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="StockReorderTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="StockReorderDataSet" msprop:Generator_UserDSName="StockReorderDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="StockReorderTable" msprop:Generator_TableClassName="StockReorderTableDataTable" msprop:Generator_TableVarName="tableStockReorderTable" msprop:Generator_RowChangedName="StockReorderTableRowChanged" msprop:Generator_TablePropName="StockReorderTable" msprop:Generator_RowDeletingName="StockReorderTableRowDeleting" msprop:Generator_RowChangingName="StockReorderTableRowChanging" msprop:Generator_RowEvHandlerName="StockReorderTableRowChangeEventHandler" msprop:Generator_RowDeletedName="StockReorderTableRowDeleted" msprop:Generator_RowClassName="StockReorderTableRow" msprop:Generator_UserTableName="StockReorderTable" msprop:Generator_RowEvArgName="StockReorderTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ReorderID" msprop:Generator_ColumnVarNameInTable="columnReorderID" msprop:Generator_ColumnPropNameInRow="ReorderID" msprop:Generator_ColumnPropNameInTable="ReorderIDColumn" msprop:Generator_UserColumnName="ReorderID" type="xs:int" minOccurs="0" />
+              <xs:element name="StockID" msprop:Generator_ColumnVarNameInTable="columnStockID" msprop:Generator_ColumnPropNameInRow="StockID" msprop:Generator_ColumnPropNameInTable="StockIDColumn" msprop:Generator_UserColumnName="StockID" type="xs:int" minOccurs="0" />
+              <xs:element name="CurrentRetailQuantity" msprop:Generator_ColumnVarNameInTable="columnCurrentRetailQuantity" msprop:Generator_ColumnPropNameInRow="CurrentRetailQuantity" msprop:Generator_ColumnPropNameInTable="CurrentRetailQuantityColumn" msprop:Generator_UserColumnName="CurrentRetailQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ReorderRetailQuantity" msprop:Generator_ColumnVarNameInTable="columnReorderRetailQuantity" msprop:Generator_ColumnPropNameInRow="ReorderRetailQuantity" msprop:Generator_ColumnPropNameInTable="ReorderRetailQuantityColumn" msprop:Generator_UserColumnName="ReorderRetailQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NewRetailQuantity" msprop:Generator_ColumnVarNameInTable="columnNewRetailQuantity" msprop:Generator_ColumnPropNameInRow="NewRetailQuantity" msprop:Generator_ColumnPropNameInTable="NewRetailQuantityColumn" msprop:Generator_UserColumnName="NewRetailQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CurrentWholesaleQuantity" msprop:Generator_ColumnVarNameInTable="columnCurrentWholesaleQuantity" msprop:Generator_ColumnPropNameInRow="CurrentWholesaleQuantity" msprop:Generator_ColumnPropNameInTable="CurrentWholesaleQuantityColumn" msprop:Generator_UserColumnName="CurrentWholesaleQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ReorderWholesaleQuantity" msprop:Generator_ColumnVarNameInTable="columnReorderWholesaleQuantity" msprop:Generator_ColumnPropNameInRow="ReorderWholesaleQuantity" msprop:Generator_ColumnPropNameInTable="ReorderWholesaleQuantityColumn" msprop:Generator_UserColumnName="ReorderWholesaleQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NewWholesaleQuantity" msprop:Generator_ColumnVarNameInTable="columnNewWholesaleQuantity" msprop:Generator_ColumnPropNameInRow="NewWholesaleQuantity" msprop:Generator_ColumnPropNameInTable="NewWholesaleQuantityColumn" msprop:Generator_UserColumnName="NewWholesaleQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ReorderDate" msprop:Generator_ColumnVarNameInTable="columnReorderDate" msprop:Generator_ColumnPropNameInRow="ReorderDate" msprop:Generator_ColumnPropNameInTable="ReorderDateColumn" msprop:Generator_UserColumnName="ReorderDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RorderSource" msprop:Generator_ColumnVarNameInTable="columnRorderSource" msprop:Generator_ColumnPropNameInRow="RorderSource" msprop:Generator_ColumnPropNameInTable="RorderSourceColumn" msprop:Generator_UserColumnName="RorderSource" type="xs:string" minOccurs="0" />
+              <xs:element name="Supervisor" msprop:Generator_ColumnVarNameInTable="columnSupervisor" msprop:Generator_ColumnPropNameInRow="Supervisor" msprop:Generator_ColumnPropNameInTable="SupervisorColumn" msprop:Generator_UserColumnName="Supervisor" type="xs:string" minOccurs="0" />
+              <xs:element name="Comment" msprop:Generator_ColumnVarNameInTable="columnComment" msprop:Generator_ColumnPropNameInRow="Comment" msprop:Generator_ColumnPropNameInTable="CommentColumn" msprop:Generator_UserColumnName="Comment" type="xs:string" minOccurs="0" />
+              <xs:element name="RegDate" msprop:Generator_ColumnVarNameInTable="columnRegDate" msprop:Generator_ColumnPropNameInRow="RegDate" msprop:Generator_ColumnPropNameInTable="RegDateColumn" msprop:Generator_UserColumnName="RegDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="InputedBy" msprop:Generator_ColumnVarNameInTable="columnInputedBy" msprop:Generator_ColumnPropNameInRow="InputedBy" msprop:Generator_ColumnPropNameInTable="InputedByColumn" msprop:Generator_UserColumnName="InputedBy" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

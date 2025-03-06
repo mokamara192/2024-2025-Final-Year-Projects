@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="QRandBarcodeDataSet" targetNamespace="http://tempuri.org/QRandBarcodeDataSet.xsd" xmlns:mstns="http://tempuri.org/QRandBarcodeDataSet.xsd" xmlns="http://tempuri.org/QRandBarcodeDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="QRandBarcodeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="QRandBarcodeDataSet" msprop:Generator_UserDSName="QRandBarcodeDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="QRandLinearCode" msprop:Generator_TableClassName="QRandLinearCodeDataTable" msprop:Generator_TableVarName="tableQRandLinearCode" msprop:Generator_TablePropName="QRandLinearCode" msprop:Generator_RowDeletingName="QRandLinearCodeRowDeleting" msprop:Generator_RowChangingName="QRandLinearCodeRowChanging" msprop:Generator_RowEvHandlerName="QRandLinearCodeRowChangeEventHandler" msprop:Generator_RowDeletedName="QRandLinearCodeRowDeleted" msprop:Generator_UserTableName="QRandLinearCode" msprop:Generator_RowChangedName="QRandLinearCodeRowChanged" msprop:Generator_RowEvArgName="QRandLinearCodeRowChangeEvent" msprop:Generator_RowClassName="QRandLinearCodeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="QRCode" msprop:Generator_ColumnVarNameInTable="columnQRCode" msprop:Generator_ColumnPropNameInRow="QRCode" msprop:Generator_ColumnPropNameInTable="QRCodeColumn" msprop:Generator_UserColumnName="QRCode" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="LinearCode" msprop:Generator_ColumnVarNameInTable="columnLinearCode" msprop:Generator_ColumnPropNameInRow="LinearCode" msprop:Generator_ColumnPropNameInTable="LinearCodeColumn" msprop:Generator_UserColumnName="LinearCode" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

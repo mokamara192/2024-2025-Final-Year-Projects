@@ -1,0 +1,2187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{D4154C0A-0178-44B8-8689-ADD0B023A31B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>MoCTIMIS.My.MyApplication</StartupObject>
+    <RootNamespace>MoCTIMIS</RootNamespace>
+    <AssemblyName>MoCTIMIS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MoCTIMIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MoCTIMIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeLib.Barcode.WinForms, Version=5.0.0.30712, Culture=neutral, PublicKeyToken=ef1bae04ecfd0461, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\Debug\BarcodeLib.Barcode.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v18.2.UI, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v18.2.Drawing, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Spreadsheet.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPdfViewer.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.2.Extensions, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.2.Extensions, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Leadtools, Version=19.0.4.0, Culture=neutral, PublicKeyToken=9cf889f53ea9b907, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Viable Party Manager\Viable Party Manager\Bin\Debug\Leadtools.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Codecs, Version=19.0.4.0, Culture=neutral, PublicKeyToken=9cf889f53ea9b907, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Viable Party Manager\Viable Party Manager\Bin\Debug\Leadtools.Codecs.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.ColorConversion, Version=19.0.4.0, Culture=neutral, PublicKeyToken=9cf889f53ea9b907, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Viable Party Manager\Viable Party Manager\Bin\Debug\Leadtools.ColorConversion.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Controls.WinForms, Version=19.0.4.0, Culture=neutral, PublicKeyToken=9cf889f53ea9b907, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Viable Party Manager\Viable Party Manager\Bin\Debug\Leadtools.Controls.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Drawing, Version=19.0.4.0, Culture=neutral, PublicKeyToken=9cf889f53ea9b907, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Viable Party Manager\Viable Party Manager\Bin\Debug\Leadtools.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.ImageProcessing.Effects, Version=19.0.4.0, Culture=neutral, PublicKeyToken=9cf889f53ea9b907, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Viable Party Manager\Viable Party Manager\Bin\Debug\Leadtools.ImageProcessing.Effects.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.ImageProcessing.Utilities, Version=19.0.4.0, Culture=neutral, PublicKeyToken=9cf889f53ea9b907, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Viable Party Manager\Viable Party Manager\Bin\Debug\Leadtools.ImageProcessing.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Svg, Version=19.0.4.0, Culture=neutral, PublicKeyToken=9cf889f53ea9b907, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Viable Party Manager\Viable Party Manager\Bin\Debug\Leadtools.Svg.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Twain, Version=19.0.4.0, Culture=neutral, PublicKeyToken=9cf889f53ea9b907, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Viable Party Manager\Viable Party Manager\Bin\Debug\Leadtools.Twain.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Vector, Version=19.0.4.0, Culture=neutral, PublicKeyToken=9cf889f53ea9b907, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Viable Party Manager\Viable Party Manager\Bin\Debug\Leadtools.Vector.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.Wia, Version=19.0.4.0, Culture=neutral, PublicKeyToken=9cf889f53ea9b907, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Viable Party Manager\Viable Party Manager\Bin\Debug\Leadtools.Wia.dll</HintPath>
+    </Reference>
+    <Reference Include="Leadtools.WinForms.CommonDialogs.File, Version=19.0.4.0, Culture=neutral, PublicKeyToken=9cf889f53ea9b907, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Viable Party Manager\Viable Party Manager\Bin\Debug\Leadtools.WinForms.CommonDialogs.File.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="mysql.data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\mysql.data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Saraff.Twain, Version=1.0.20.517, Culture=neutral, PublicKeyToken=467d7c56f22cafb6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\Debug\Saraff.Twain.dll</HintPath>
+    </Reference>
+    <Reference Include="Pegazux.GoogleMaps, Version=0.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\Debug\Pegazux.GoogleMaps.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="TwainLib, Version=3.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\Debug\TwainLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\DemoGlobalization.vb" />
+    <Compile Include="Common\DialogUtilities.vb" />
+    <Compile Include="Common\ImageFileLoader.vb" />
+    <Compile Include="Common\ImageFileLoaderPagesDialog.designer.vb">
+      <DependentUpon>ImageFileLoaderPagesDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ImageFileLoaderPagesDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\ImageFileSaver.vb" />
+    <Compile Include="Common\ImageInformation.vb" />
+    <Compile Include="Common\Messager.vb" />
+    <Compile Include="Common\ProgressForm.designer.vb">
+      <DependentUpon>ProgressForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ProgressForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\UnlockSupport.vb" />
+    <Compile Include="Common\WaitCursor.vb" />
+    <Compile Include="Common\WiaVersionForm.designer.vb">
+      <DependentUpon>WiaVersionForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\WiaVersionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrystalReportSummarySubReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportSummarySubReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportDigitalArchieve.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportDigitalArchieve.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportUniversalRecordList.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportUniversalRecordList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportUniversalReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportUniversalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportUniversalSummaryOnly.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportUniversalSummaryOnly.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DebtorsDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DebtorsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentTypeandQuanfityDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DocumentTypeandQuanfityDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewScanningDocument.designer.vb">
+      <DependentUpon>frmNewScanningDocument.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewScanningDocument.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScanDocumentTypeandQuantity.designer.vb">
+      <DependentUpon>frmScanDocumentTypeandQuantity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmScanDocumentTypeandQuantity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralSalesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeneralSalesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralSalesItemsDataSet.vb">
+      <DependentUpon>GeneralSalesItemsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InvoicesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoicesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentsDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PaymentsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Scanning UI\AcquireOptionsForm.designer.vb">
+      <DependentUpon>AcquireOptionsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scanning UI\AcquireOptionsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanning UI\CapabilitiesListValuesForm.designer.vb">
+      <DependentUpon>CapabilitiesListValuesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scanning UI\CapabilitiesListValuesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanning UI\CapabilitiesRangeValuesForm.designer.vb">
+      <DependentUpon>CapabilitiesRangeValuesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scanning UI\CapabilitiesRangeValuesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanning UI\HelperFunctions.vb" />
+    <Compile Include="Scanning UI\MyFormat.vb" />
+    <Compile Include="Scanning UI\MyPropertiesErrors.vb" />
+    <Compile Include="Scanning UI\SupportedCapabilitiesForm.designer.vb">
+      <DependentUpon>SupportedCapabilitiesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scanning UI\SupportedCapabilitiesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanning UI\SupportedFormatsForm.designer.vb">
+      <DependentUpon>SupportedFormatsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scanning UI\SupportedFormatsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanning UI\WIADeviceItemsForm.designer.vb">
+      <DependentUpon>WIADeviceItemsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scanning UI\WIADeviceItemsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanning UI\WIADeviceItemsFormSingleScanner.designer.vb">
+      <DependentUpon>WIADeviceItemsFormSingleScanner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scanning UI\WIADeviceItemsFormSingleScanner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanning UI\WIAPropertiesErrorsForm.designer.vb">
+      <DependentUpon>WIAPropertiesErrorsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scanning UI\WIAPropertiesErrorsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanning UI\WIAPropertiesForm.designer.vb">
+      <DependentUpon>WIAPropertiesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scanning UI\WIAPropertiesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffProfilesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StaffProfilesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SummaryDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SummaryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CompanySettingDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanySettingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QRandBarcodeDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QRandBarcodeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UniversalDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UniversalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventory.Designer.vb">
+      <DependentUpon>frmInventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceItemsDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceItemsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoiceItems.Designer.vb">
+      <DependentUpon>frmInvoiceItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoiceItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceFilesDataDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceFilesDataDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoiceFilesData.Designer.vb">
+      <DependentUpon>frmInvoiceFilesData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoiceFilesData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralSalesItemsDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeneralSalesItemsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmGeneralSalesItems.Designer.vb">
+      <DependentUpon>frmGeneralSalesItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGeneralSalesItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGeneralSales.Designer.vb">
+      <DependentUpon>frmGeneralSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGeneralSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceCustomerLinkDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceCustomerLinkDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoiceCustomerLink.Designer.vb">
+      <DependentUpon>frmInvoiceCustomerLink.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoiceCustomerLink.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceCustomersDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceCustomersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoiceCustomers.Designer.vb">
+      <DependentUpon>frmInvoiceCustomers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoiceCustomers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BranchDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BranchDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmBranch.Designer.vb">
+      <DependentUpon>frmBranch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBranch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInvoices.Designer.vb">
+      <DependentUpon>frmInvoices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrencySetupDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CurrencySetupDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmCurrencySetup.Designer.vb">
+      <DependentUpon>frmCurrencySetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCurrencySetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerTypesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerTypesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerTypes.Designer.vb">
+      <DependentUpon>frmCustomerTypes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerTypes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileTypesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FileTypesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmFileTypes.Designer.vb">
+      <DependentUpon>frmFileTypes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFileTypes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BankDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmBank.Designer.vb">
+      <DependentUpon>frmBank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBank.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IdentificationTypesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IdentificationTypesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmIdentificationTypes.Designer.vb">
+      <DependentUpon>frmIdentificationTypes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIdentificationTypes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoicePaymentDocumentsDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoicePaymentDocumentsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoicePaymentDocuments.Designer.vb">
+      <DependentUpon>frmInvoicePaymentDocuments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoicePaymentDocuments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceFileTypesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceFileTypesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoiceFileTypes.Designer.vb">
+      <DependentUpon>frmInvoiceFileTypes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoiceFileTypes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockReorderDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockReorderDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmStockReorder.Designer.vb">
+      <DependentUpon>frmStockReorder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStockReorder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoicePaymentsDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoicePaymentsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoicePayments.Designer.vb">
+      <DependentUpon>frmInvoicePayments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoicePayments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramUpdatesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgramUpdatesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmProgramUpdates.Designer.vb">
+      <DependentUpon>frmProgramUpdates.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProgramUpdates.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramVersionDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgramVersionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmProgramVersion.Designer.vb">
+      <DependentUpon>frmProgramVersion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProgramVersion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tblUserLogDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tblUserLogDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmtblUserLog.Designer.vb">
+      <DependentUpon>frmtblUserLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmtblUserLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemCategoriesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemCategoriesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmItemCategories.Designer.vb">
+      <DependentUpon>frmItemCategories.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmItemCategories.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_GeneralSalesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>View_GeneralSalesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View_InvoiceCustomerDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>View_InvoiceCustomerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View_InvoiceCustomersBriefDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>View_InvoiceCustomersBriefDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View_InvoiceCustomersDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>View_InvoiceCustomersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View_InvoiceCustomersLinkDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>View_InvoiceCustomersLinkDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WholesaleUnitsOfMeasurementDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WholesaleUnitsOfMeasurementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmWholesaleUnitsOfMeasurement.Designer.vb">
+      <DependentUpon>frmWholesaleUnitsOfMeasurement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWholesaleUnitsOfMeasurement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailUnitsOfMeasurementDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RetailUnitsOfMeasurementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmRetailUnitsOfMeasurement.Designer.vb">
+      <DependentUpon>frmRetailUnitsOfMeasurement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRetailUnitsOfMeasurement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraReportCustomerStatements.designer.vb">
+      <DependentUpon>XtraReportCustomerStatements.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportCustomerStatements.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportDeliveryTemplate.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInventoryMultiple.Designer.vb">
+      <DependentUpon>XtraReportInventoryMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInventoryMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInventorySingle.Designer.vb">
+      <DependentUpon>XtraReportInventorySingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInventorySingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoiceHardcopy.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoiceHardcopyMore.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoiceItemsMultiple.Designer.vb">
+      <DependentUpon>XtraReportInvoiceItemsMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInvoiceItemsMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoiceItemsSingle.Designer.vb">
+      <DependentUpon>XtraReportInvoiceItemsSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInvoiceItemsSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoiceFilesDataMultiple.Designer.vb">
+      <DependentUpon>XtraReportInvoiceFilesDataMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInvoiceFilesDataMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoiceFilesDataSingle.Designer.vb">
+      <DependentUpon>XtraReportInvoiceFilesDataSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInvoiceFilesDataSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportGeneralSalesItemsMultiple.Designer.vb">
+      <DependentUpon>XtraReportGeneralSalesItemsMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportGeneralSalesItemsMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportGeneralSalesItemsSingle.Designer.vb">
+      <DependentUpon>XtraReportGeneralSalesItemsSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportGeneralSalesItemsSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportGeneralSalesMultiple.Designer.vb">
+      <DependentUpon>XtraReportGeneralSalesMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportGeneralSalesMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportGeneralSalesSingle.Designer.vb">
+      <DependentUpon>XtraReportGeneralSalesSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportGeneralSalesSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoiceCustomerLinkMultiple.Designer.vb">
+      <DependentUpon>XtraReportInvoiceCustomerLinkMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInvoiceCustomerLinkMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoiceCustomerLinkSingle.Designer.vb">
+      <DependentUpon>XtraReportInvoiceCustomerLinkSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInvoiceCustomerLinkSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoiceCustomersMultiple.Designer.vb">
+      <DependentUpon>XtraReportInvoiceCustomersMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInvoiceCustomersMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoiceCustomersSingle.Designer.vb">
+      <DependentUpon>XtraReportInvoiceCustomersSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInvoiceCustomersSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportBranchMultiple.Designer.vb">
+      <DependentUpon>XtraReportBranchMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportBranchMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportBranchSingle.Designer.vb">
+      <DependentUpon>XtraReportBranchSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportBranchSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoiceItemsSubReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoiceItemsSubReportMore.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoiceItemsSubReportNoEnd.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoicePaymentStatement.designer.vb">
+      <DependentUpon>XtraReportInvoicePaymentStatement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInvoicePaymentStatement.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoicesMultiple.Designer.vb">
+      <DependentUpon>XtraReportInvoicesMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInvoicesMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoicesSingle.Designer.vb">
+      <DependentUpon>XtraReportInvoicesSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInvoicesSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportCurrencySetupMultiple.Designer.vb">
+      <DependentUpon>XtraReportCurrencySetupMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportCurrencySetupMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportCurrencySetupSingle.Designer.vb">
+      <DependentUpon>XtraReportCurrencySetupSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportCurrencySetupSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportCustomerTypesMultiple.Designer.vb">
+      <DependentUpon>XtraReportCustomerTypesMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportCustomerTypesMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportCustomerTypesSingle.Designer.vb">
+      <DependentUpon>XtraReportCustomerTypesSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportCustomerTypesSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportFileTypesMultiple.Designer.vb">
+      <DependentUpon>XtraReportFileTypesMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportFileTypesMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportFileTypesSingle.Designer.vb">
+      <DependentUpon>XtraReportFileTypesSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportFileTypesSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportBankMultiple.Designer.vb">
+      <DependentUpon>XtraReportBankMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportBankMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportBankSingle.Designer.vb">
+      <DependentUpon>XtraReportBankSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportBankSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportIdentificationTypesMultiple.Designer.vb">
+      <DependentUpon>XtraReportIdentificationTypesMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportIdentificationTypesMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportIdentificationTypesSingle.Designer.vb">
+      <DependentUpon>XtraReportIdentificationTypesSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportIdentificationTypesSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoicePaymentDocumentsMultiple.Designer.vb">
+      <DependentUpon>XtraReportInvoicePaymentDocumentsMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInvoicePaymentDocumentsMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoicePaymentDocumentsSingle.Designer.vb">
+      <DependentUpon>XtraReportInvoicePaymentDocumentsSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInvoicePaymentDocumentsSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoiceFileTypesMultiple.Designer.vb">
+      <DependentUpon>XtraReportInvoiceFileTypesMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInvoiceFileTypesMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoiceFileTypesSingle.Designer.vb">
+      <DependentUpon>XtraReportInvoiceFileTypesSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInvoiceFileTypesSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoiceTemplate.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportLetterheadTemplate.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportPaymentReceipt.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportPreviewDocument.designer.vb">
+      <DependentUpon>XtraReportPreviewDocument.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportPreviewDocument.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportReceiptTemplate.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportStockReorderMultiple.Designer.vb">
+      <DependentUpon>XtraReportStockReorderMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportStockReorderMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportStockReorderSingle.Designer.vb">
+      <DependentUpon>XtraReportStockReorderSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportStockReorderSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoicePaymentsMultiple.Designer.vb">
+      <DependentUpon>XtraReportInvoicePaymentsMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInvoicePaymentsMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportInvoicePaymentsSingle.Designer.vb">
+      <DependentUpon>XtraReportInvoicePaymentsSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportInvoicePaymentsSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportProgramUpdatesMultiple.Designer.vb">
+      <DependentUpon>XtraReportProgramUpdatesMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportProgramUpdatesMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportProgramUpdatesSingle.Designer.vb">
+      <DependentUpon>XtraReportProgramUpdatesSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportProgramUpdatesSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportProgramVersionMultiple.Designer.vb">
+      <DependentUpon>XtraReportProgramVersionMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportProgramVersionMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportProgramVersionSingle.Designer.vb">
+      <DependentUpon>XtraReportProgramVersionSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportProgramVersionSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReporttblUserLogMultiple.Designer.vb">
+      <DependentUpon>XtraReporttblUserLogMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReporttblUserLogMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReporttblUserLogSingle.Designer.vb">
+      <DependentUpon>XtraReporttblUserLogSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReporttblUserLogSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportItemCategoriesMultiple.Designer.vb">
+      <DependentUpon>XtraReportItemCategoriesMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportItemCategoriesMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportItemCategoriesSingle.Designer.vb">
+      <DependentUpon>XtraReportItemCategoriesSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportItemCategoriesSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportWholesaleUnitsOfMeasurementMultiple.Designer.vb">
+      <DependentUpon>XtraReportWholesaleUnitsOfMeasurementMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportWholesaleUnitsOfMeasurementMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportWholesaleUnitsOfMeasurementSingle.Designer.vb">
+      <DependentUpon>XtraReportWholesaleUnitsOfMeasurementSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportWholesaleUnitsOfMeasurementSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportRetailUnitsOfMeasurementMultiple.Designer.vb">
+      <DependentUpon>XtraReportRetailUnitsOfMeasurementMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportRetailUnitsOfMeasurementMultiple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportRetailUnitsOfMeasurementSingle.Designer.vb">
+      <DependentUpon>XtraReportRetailUnitsOfMeasurementSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportRetailUnitsOfMeasurementSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmNewReportViewer.Designer.vb">
+      <DependentUpon>frmNewReportViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewReportViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.Designer.vb">
+      <DependentUpon>frmSplash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWordProcessor.Designer.vb">
+      <DependentUpon>frmWordProcessor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWordProcessor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewPDF.Designer.vb">
+      <DependentUpon>frmViewPDF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewPDF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSynchronize.Designer.vb">
+      <DependentUpon>frmSynchronize.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSynchronize.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocateServer.Designer.vb">
+      <DependentUpon>frmLocateServer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLocateServer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGPS.Designer.vb">
+      <DependentUpon>frmGPS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGPS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGPSLocation.Designer.vb">
+      <DependentUpon>frmGPSLocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGPSLocation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGPSLocationMultiple.Designer.vb">
+      <DependentUpon>frmGPSLocationMultiple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGPSLocationMultiple.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewImage.Designer.vb">
+      <DependentUpon>frmViewImage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewImage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVideoPlayer.Designer.vb">
+      <DependentUpon>frmVideoPlayer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVideoPlayer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpenandViewDocuments.Designer.vb">
+      <DependentUpon>frmOpenandViewDocuments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpenandViewDocuments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScanner.Designer.vb">
+      <DependentUpon>frmScanner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmScanner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportViewer.Designer.vb">
+      <DependentUpon>frmReportViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.vb">
+      <DependentUpon>frmSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccountManager.Designer.vb">
+      <DependentUpon>frmAccountManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccountManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompanySettings.Designer.vb">
+      <DependentUpon>frmCompanySettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCompanySettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSpreadsheet.Designer.vb">
+      <DependentUpon>frmSpreadsheet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSpreadsheet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDigitalArchieve.Designer.vb">
+      <DependentUpon>frmDigitalArchieve.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDigitalArchieve.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessages.Designer.vb">
+      <DependentUpon>frmMessages.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessages.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForeignKeyPreview.Designer.vb">
+      <DependentUpon>frmForeignKeyPreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmForeignKeyPreview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangeUserPassword.Designer.vb">
+      <DependentUpon>frmChangeUserPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangeUserPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImports.Designer.vb">
+      <DependentUpon>frmImports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmImports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuickPreview.Designer.vb">
+      <DependentUpon>frmQuickPreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuickPreview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuickSearch.Designer.vb">
+      <DependentUpon>frmQuickSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuickSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboardNew.Designer.vb">
+      <DependentUpon>frmDashboardNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashboardNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNoLoginAdmin.Designer.vb">
+      <DependentUpon>frmNoLoginAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNoLoginAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.vb">
+      <DependentUpon>frmReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckConnection.Designer.vb">
+      <DependentUpon>frmCheckConnection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckConnection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Variables.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Common\ImageFileLoaderPagesDialog.resx">
+      <DependentUpon>ImageFileLoaderPagesDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ProgressForm.resx">
+      <DependentUpon>ProgressForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\WiaVersionForm.resx">
+      <DependentUpon>WiaVersionForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAccountManager.resx">
+      <DependentUpon>frmAccountManager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckConnection.resx">
+      <DependentUpon>frmCheckConnection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCompanySettings.resx">
+      <DependentUpon>frmCompanySettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewScanningDocument.resx">
+      <DependentUpon>frmNewScanningDocument.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScanDocumentTypeandQuantity.resx">
+      <DependentUpon>frmScanDocumentTypeandQuantity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSpreadsheet.resx">
+      <DependentUpon>frmSpreadsheet.vb</DependentUpon>
+    </EmbeddedResource> 
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmDashboardNew.resx">
+      <DependentUpon>frmDashboardNew.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuickSearch.resx">
+      <DependentUpon>frmQuickSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuickPreview.resx">
+      <DependentUpon>frmQuickPreview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWordProcessor.resx">
+      <DependentUpon>frmWordProcessor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewPDF.resx">
+      <DependentUpon>frmViewPDF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSynchronize.resx">
+      <DependentUpon>frmSynchronize.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocateServer.resx">
+      <DependentUpon>frmLocateServer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGPS.resx">
+      <DependentUpon>frmGPS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGPSLocation.resx">
+      <DependentUpon>frmGPSLocation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGPSLocationMultiple.resx">
+      <DependentUpon>frmGPSLocationMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewImage.resx">
+      <DependentUpon>frmViewImage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVideoPlayer.resx">
+      <DependentUpon>frmVideoPlayer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpenandViewDocuments.resx">
+      <DependentUpon>frmOpenandViewDocuments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScanner.resx">
+      <DependentUpon>frmScanner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewReportViewer.resx">
+      <DependentUpon>frmNewReportViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInventory.resx">
+      <DependentUpon>frmInventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanning UI\AcquireOptionsForm.resx">
+      <DependentUpon>AcquireOptionsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanning UI\CapabilitiesListValuesForm.resx">
+      <DependentUpon>CapabilitiesListValuesForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanning UI\CapabilitiesRangeValuesForm.resx">
+      <DependentUpon>CapabilitiesRangeValuesForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanning UI\SupportedCapabilitiesForm.resx">
+      <DependentUpon>SupportedCapabilitiesForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanning UI\SupportedFormatsForm.resx">
+      <DependentUpon>SupportedFormatsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanning UI\WIADeviceItemsForm.resx">
+      <DependentUpon>WIADeviceItemsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanning UI\WIADeviceItemsFormSingleScanner.resx">
+      <DependentUpon>WIADeviceItemsFormSingleScanner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanning UI\WIAPropertiesErrorsForm.resx">
+      <DependentUpon>WIAPropertiesErrorsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanning UI\WIAPropertiesForm.resx">
+      <DependentUpon>WIAPropertiesForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportCustomerStatements.resx">
+      <DependentUpon>XtraReportCustomerStatements.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportDeliveryTemplate.resx">
+      <DependentUpon>XtraReportDeliveryTemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInventoryMultiple.resx">
+      <DependentUpon>XtraReportInventoryMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInventorySingle.resx">
+      <DependentUpon>XtraReportInventorySingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoiceItems.resx">
+      <DependentUpon>frmInvoiceItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoiceHardcopy.resx">
+      <DependentUpon>XtraReportInvoiceHardcopy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoiceHardcopyMore.resx">
+      <DependentUpon>XtraReportInvoiceHardcopyMore.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoiceItemsMultiple.resx">
+      <DependentUpon>XtraReportInvoiceItemsMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoiceItemsSingle.resx">
+      <DependentUpon>XtraReportInvoiceItemsSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoiceFilesData.resx">
+      <DependentUpon>frmInvoiceFilesData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoiceFilesDataMultiple.resx">
+      <DependentUpon>XtraReportInvoiceFilesDataMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoiceFilesDataSingle.resx">
+      <DependentUpon>XtraReportInvoiceFilesDataSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGeneralSalesItems.resx">
+      <DependentUpon>frmGeneralSalesItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportGeneralSalesItemsMultiple.resx">
+      <DependentUpon>XtraReportGeneralSalesItemsMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportGeneralSalesItemsSingle.resx">
+      <DependentUpon>XtraReportGeneralSalesItemsSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGeneralSales.resx">
+      <DependentUpon>frmGeneralSales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportGeneralSalesMultiple.resx">
+      <DependentUpon>XtraReportGeneralSalesMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportGeneralSalesSingle.resx">
+      <DependentUpon>XtraReportGeneralSalesSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoiceCustomerLink.resx">
+      <DependentUpon>frmInvoiceCustomerLink.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoiceCustomerLinkMultiple.resx">
+      <DependentUpon>XtraReportInvoiceCustomerLinkMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoiceCustomerLinkSingle.resx">
+      <DependentUpon>XtraReportInvoiceCustomerLinkSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoiceCustomers.resx">
+      <DependentUpon>frmInvoiceCustomers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoiceCustomersMultiple.resx">
+      <DependentUpon>XtraReportInvoiceCustomersMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoiceCustomersSingle.resx">
+      <DependentUpon>XtraReportInvoiceCustomersSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBranch.resx">
+      <DependentUpon>frmBranch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportBranchMultiple.resx">
+      <DependentUpon>XtraReportBranchMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportBranchSingle.resx">
+      <DependentUpon>XtraReportBranchSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoices.resx">
+      <DependentUpon>frmInvoices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoiceItemsSubReport.resx">
+      <DependentUpon>XtraReportInvoiceItemsSubReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoiceItemsSubReportMore.resx">
+      <DependentUpon>XtraReportInvoiceItemsSubReportMore.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoiceItemsSubReportNoEnd.resx">
+      <DependentUpon>XtraReportInvoiceItemsSubReportNoEnd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoicePaymentStatement.resx">
+      <DependentUpon>XtraReportInvoicePaymentStatement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoicesMultiple.resx">
+      <DependentUpon>XtraReportInvoicesMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoicesSingle.resx">
+      <DependentUpon>XtraReportInvoicesSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCurrencySetup.resx">
+      <DependentUpon>frmCurrencySetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportCurrencySetupMultiple.resx">
+      <DependentUpon>XtraReportCurrencySetupMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportCurrencySetupSingle.resx">
+      <DependentUpon>XtraReportCurrencySetupSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerTypes.resx">
+      <DependentUpon>frmCustomerTypes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportCustomerTypesMultiple.resx">
+      <DependentUpon>XtraReportCustomerTypesMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportCustomerTypesSingle.resx">
+      <DependentUpon>XtraReportCustomerTypesSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFileTypes.resx">
+      <DependentUpon>frmFileTypes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportFileTypesMultiple.resx">
+      <DependentUpon>XtraReportFileTypesMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportFileTypesSingle.resx">
+      <DependentUpon>XtraReportFileTypesSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBank.resx">
+      <DependentUpon>frmBank.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportBankMultiple.resx">
+      <DependentUpon>XtraReportBankMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportBankSingle.resx">
+      <DependentUpon>XtraReportBankSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIdentificationTypes.resx">
+      <DependentUpon>frmIdentificationTypes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportIdentificationTypesMultiple.resx">
+      <DependentUpon>XtraReportIdentificationTypesMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportIdentificationTypesSingle.resx">
+      <DependentUpon>XtraReportIdentificationTypesSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoicePaymentDocuments.resx">
+      <DependentUpon>frmInvoicePaymentDocuments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoicePaymentDocumentsMultiple.resx">
+      <DependentUpon>XtraReportInvoicePaymentDocumentsMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoicePaymentDocumentsSingle.resx">
+      <DependentUpon>XtraReportInvoicePaymentDocumentsSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoiceFileTypes.resx">
+      <DependentUpon>frmInvoiceFileTypes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoiceFileTypesMultiple.resx">
+      <DependentUpon>XtraReportInvoiceFileTypesMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoiceFileTypesSingle.resx">
+      <DependentUpon>XtraReportInvoiceFileTypesSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStockReorder.resx">
+      <DependentUpon>frmStockReorder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoiceTemplate.resx">
+      <DependentUpon>XtraReportInvoiceTemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportLetterheadTemplate.resx">
+      <DependentUpon>XtraReportLetterheadTemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportPaymentReceipt.resx">
+      <DependentUpon>XtraReportPaymentReceipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportPreviewDocument.resx">
+      <DependentUpon>XtraReportPreviewDocument.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportReceiptTemplate.resx">
+      <DependentUpon>XtraReportReceiptTemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportStockReorderMultiple.resx">
+      <DependentUpon>XtraReportStockReorderMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportStockReorderSingle.resx">
+      <DependentUpon>XtraReportStockReorderSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoicePayments.resx">
+      <DependentUpon>frmInvoicePayments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoicePaymentsMultiple.resx">
+      <DependentUpon>XtraReportInvoicePaymentsMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportInvoicePaymentsSingle.resx">
+      <DependentUpon>XtraReportInvoicePaymentsSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProgramUpdates.resx">
+      <DependentUpon>frmProgramUpdates.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportProgramUpdatesMultiple.resx">
+      <DependentUpon>XtraReportProgramUpdatesMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportProgramUpdatesSingle.resx">
+      <DependentUpon>XtraReportProgramUpdatesSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProgramVersion.resx">
+      <DependentUpon>frmProgramVersion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportProgramVersionMultiple.resx">
+      <DependentUpon>XtraReportProgramVersionMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportProgramVersionSingle.resx">
+      <DependentUpon>XtraReportProgramVersionSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmtblUserLog.resx">
+      <DependentUpon>frmtblUserLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReporttblUserLogMultiple.resx">
+      <DependentUpon>XtraReporttblUserLogMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReporttblUserLogSingle.resx">
+      <DependentUpon>XtraReporttblUserLogSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmItemCategories.resx">
+      <DependentUpon>frmItemCategories.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportItemCategoriesMultiple.resx">
+      <DependentUpon>XtraReportItemCategoriesMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportItemCategoriesSingle.resx">
+      <DependentUpon>XtraReportItemCategoriesSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWholesaleUnitsOfMeasurement.resx">
+      <DependentUpon>frmWholesaleUnitsOfMeasurement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportWholesaleUnitsOfMeasurementMultiple.resx">
+      <DependentUpon>XtraReportWholesaleUnitsOfMeasurementMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportWholesaleUnitsOfMeasurementSingle.resx">
+      <DependentUpon>XtraReportWholesaleUnitsOfMeasurementSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRetailUnitsOfMeasurement.resx">
+      <DependentUpon>frmRetailUnitsOfMeasurement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportRetailUnitsOfMeasurementMultiple.resx">
+      <DependentUpon>XtraReportRetailUnitsOfMeasurementMultiple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportRetailUnitsOfMeasurementSingle.resx">
+      <DependentUpon>XtraReportRetailUnitsOfMeasurementSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportSummarySubReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportSummarySubReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportDigitalArchieve.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportDigitalArchieve.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportUniversalRecordList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportUniversalRecordList.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportUniversalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportUniversalReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportUniversalSummaryOnly.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportUniversalSummaryOnly.vb</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DebtorsDataSet.xsc">
+      <DependentUpon>DebtorsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DebtorsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DebtorsDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DebtorsDataSet.xss">
+      <DependentUpon>DebtorsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DocumentTypeandQuanfityDataSet.xsc">
+      <DependentUpon>DocumentTypeandQuanfityDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DocumentTypeandQuanfityDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DocumentTypeandQuanfityDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DocumentTypeandQuanfityDataSet.xss">
+      <DependentUpon>DocumentTypeandQuanfityDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GeneralSalesDataSet.xsc">
+      <DependentUpon>GeneralSalesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GeneralSalesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GeneralSalesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="GeneralSalesDataSet.xss">
+      <DependentUpon>GeneralSalesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDataSet.xsc">
+      <DependentUpon>InventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="InventoryDataSet.xss">
+      <DependentUpon>InventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvoiceItemsDataSet.xsc">
+      <DependentUpon>InvoiceItemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvoiceItemsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InvoiceItemsDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="InvoiceItemsDataSet.xss">
+      <DependentUpon>InvoiceItemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvoiceFilesDataDataSet.xsc">
+      <DependentUpon>InvoiceFilesDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvoiceFilesDataDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InvoiceFilesDataDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="InvoiceFilesDataDataSet.xss">
+      <DependentUpon>InvoiceFilesDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GeneralSalesItemsDataSet.xsc">
+      <DependentUpon>GeneralSalesItemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GeneralSalesItemsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GeneralSalesItemsDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="GeneralSalesItemsDataSet.xss">
+      <DependentUpon>GeneralSalesItemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvoiceCustomerLinkDataSet.xsc">
+      <DependentUpon>InvoiceCustomerLinkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvoiceCustomerLinkDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InvoiceCustomerLinkDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="InvoiceCustomerLinkDataSet.xss">
+      <DependentUpon>InvoiceCustomerLinkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvoiceCustomersDataSet.xsc">
+      <DependentUpon>InvoiceCustomersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvoiceCustomersDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InvoiceCustomersDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="InvoiceCustomersDataSet.xss">
+      <DependentUpon>InvoiceCustomersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BranchDataSet.xsc">
+      <DependentUpon>BranchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BranchDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BranchDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="BranchDataSet.xss">
+      <DependentUpon>BranchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CurrencySetupDataSet.xsc">
+      <DependentUpon>CurrencySetupDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CurrencySetupDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CurrencySetupDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="CurrencySetupDataSet.xss">
+      <DependentUpon>CurrencySetupDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CustomerTypesDataSet.xsc">
+      <DependentUpon>CustomerTypesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CustomerTypesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerTypesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="CustomerTypesDataSet.xss">
+      <DependentUpon>CustomerTypesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FileTypesDataSet.xsc">
+      <DependentUpon>FileTypesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FileTypesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FileTypesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="FileTypesDataSet.xss">
+      <DependentUpon>FileTypesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BankDataSet.xsc">
+      <DependentUpon>BankDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BankDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BankDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="BankDataSet.xss">
+      <DependentUpon>BankDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IdentificationTypesDataSet.xsc">
+      <DependentUpon>IdentificationTypesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IdentificationTypesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IdentificationTypesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="IdentificationTypesDataSet.xss">
+      <DependentUpon>IdentificationTypesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvoicePaymentDocumentsDataSet.xsc">
+      <DependentUpon>InvoicePaymentDocumentsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvoicePaymentDocumentsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InvoicePaymentDocumentsDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="InvoicePaymentDocumentsDataSet.xss">
+      <DependentUpon>InvoicePaymentDocumentsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvoiceFileTypesDataSet.xsc">
+      <DependentUpon>InvoiceFileTypesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvoiceFileTypesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InvoiceFileTypesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="InvoiceFileTypesDataSet.xss">
+      <DependentUpon>InvoiceFileTypesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvoicesDataSet.xsc">
+      <DependentUpon>InvoicesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvoicesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InvoicesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="InvoicesDataSet.xss">
+      <DependentUpon>InvoicesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PaymentsDataSet.xsc">
+      <DependentUpon>PaymentsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PaymentsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PaymentsDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PaymentsDataSet.xss">
+      <DependentUpon>PaymentsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StaffProfilesDataSet.xsc">
+      <DependentUpon>StaffProfilesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StaffProfilesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StaffProfilesDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StaffProfilesDataSet.xss">
+      <DependentUpon>StaffProfilesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StockReorderDataSet.xsc">
+      <DependentUpon>StockReorderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StockReorderDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockReorderDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="StockReorderDataSet.xss">
+      <DependentUpon>StockReorderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvoicePaymentsDataSet.xsc">
+      <DependentUpon>InvoicePaymentsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvoicePaymentsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InvoicePaymentsDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="InvoicePaymentsDataSet.xss">
+      <DependentUpon>InvoicePaymentsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProgramUpdatesDataSet.xsc">
+      <DependentUpon>ProgramUpdatesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProgramUpdatesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProgramUpdatesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="ProgramUpdatesDataSet.xss">
+      <DependentUpon>ProgramUpdatesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProgramVersionDataSet.xsc">
+      <DependentUpon>ProgramVersionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProgramVersionDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProgramVersionDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="ProgramVersionDataSet.xss">
+      <DependentUpon>ProgramVersionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="tblUserLogDataSet.xsc">
+      <DependentUpon>tblUserLogDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="tblUserLogDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tblUserLogDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="tblUserLogDataSet.xss">
+      <DependentUpon>tblUserLogDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ItemCategoriesDataSet.xsc">
+      <DependentUpon>ItemCategoriesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ItemCategoriesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ItemCategoriesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="ItemCategoriesDataSet.xss">
+      <DependentUpon>ItemCategoriesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View_GeneralSalesDataSet.xsc">
+      <DependentUpon>View_GeneralSalesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View_GeneralSalesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>View_GeneralSalesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="View_GeneralSalesDataSet.xss">
+      <DependentUpon>View_GeneralSalesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WholesaleUnitsOfMeasurementDataSet.xsc">
+      <DependentUpon>WholesaleUnitsOfMeasurementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WholesaleUnitsOfMeasurementDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WholesaleUnitsOfMeasurementDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="WholesaleUnitsOfMeasurementDataSet.xss">
+      <DependentUpon>WholesaleUnitsOfMeasurementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RetailUnitsOfMeasurementDataSet.xsc">
+      <DependentUpon>RetailUnitsOfMeasurementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RetailUnitsOfMeasurementDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RetailUnitsOfMeasurementDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="RetailUnitsOfMeasurementDataSet.xss">
+      <DependentUpon>RetailUnitsOfMeasurementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View_InvoiceCustomerDataSet.xsc">
+      <DependentUpon>View_InvoiceCustomerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View_InvoiceCustomerDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>View_InvoiceCustomerDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="View_InvoiceCustomerDataSet.xss">
+      <DependentUpon>View_InvoiceCustomerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View_InvoiceCustomersLinkDataSet.xsc">
+      <DependentUpon>View_InvoiceCustomersLinkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View_InvoiceCustomersLinkDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>View_InvoiceCustomersLinkDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="View_InvoiceCustomersLinkDataSet.xss">
+      <DependentUpon>View_InvoiceCustomersLinkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View_InvoiceCustomersBriefDataSet.xsc">
+      <DependentUpon>View_InvoiceCustomersBriefDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View_InvoiceCustomersBriefDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>View_InvoiceCustomersBriefDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="View_InvoiceCustomersBriefDataSet.xss">
+      <DependentUpon>View_InvoiceCustomersBriefDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View_InvoiceCustomersDataSet.xsc">
+      <DependentUpon>View_InvoiceCustomersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View_InvoiceCustomersDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>View_InvoiceCustomersDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="View_InvoiceCustomersDataSet.xss">
+      <DependentUpon>View_InvoiceCustomersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SummaryDataSet.xsc">
+      <DependentUpon>SummaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SummaryDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SummaryDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="SummaryDataSet.xss">
+      <DependentUpon>SummaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CompanySettingDataSet.xsc">
+      <DependentUpon>CompanySettingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CompanySettingDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CompanySettingDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="CompanySettingDataSet.xss">
+      <DependentUpon>CompanySettingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QRandBarcodeDataSet.xsc">
+      <DependentUpon>QRandBarcodeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QRandBarcodeDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QRandBarcodeDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="QRandBarcodeDataSet.xss">
+      <DependentUpon>QRandBarcodeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UniversalDataSet.xsc">
+      <DependentUpon>UniversalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UniversalDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UniversalDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="UniversalDataSet.xss">
+      <DependentUpon>UniversalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SummaryDataSet.xsc">
+      <DependentUpon>SummaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SummaryDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SummaryDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="SummaryDataSet.xss">
+      <DependentUpon>SummaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MediaPlayer">
+      <Guid>{22D6F304-B0F6-11D0-94AB-0080C74C7E95}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Amsoft Logo Transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Amsoft Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\500px-Gnome-dev-scanner.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applications-other.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archive-Icon-File.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CompNetwork.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComputerNetwork %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComputerNetwork.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hardware-Scanner-Camera-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\media-zip_mount-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No_image_available.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No_image_available2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no_preview-300x300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-photography-sign.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ocr.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Replacement_filing_cabinet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Replacement_filing_cabinet1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Replacement_filing_cabinet22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scanner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scanner-folder-icon-55268.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scan-to-create.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SL Police Logo White.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sydney-computer-networking-services.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thumbnail_thumbH250.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ORLABU Logo TRANS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ORLABU Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\boxdevices.png" />
+    <Content Include="Resources\GoSLLogo.jpg" />
+    <Content Include="Resources\IVMSLogo.png" />
+    <None Include="Resources\IVMSLogo1.png" />
+    <Content Include="Resources\officenlarge.png" />
+    <None Include="Resources\RHSILogo.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

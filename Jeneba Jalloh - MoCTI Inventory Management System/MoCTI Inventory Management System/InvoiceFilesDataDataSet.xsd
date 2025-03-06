@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TransferFilesDataDataSet" targetNamespace="http://tempuri.org/TransferFilesDataDataSet.xsd" xmlns:mstns="http://tempuri.org/TransferFilesDataDataSet.xsd" xmlns="http://tempuri.org/TransferFilesDataDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TransferFilesDataTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TransferFilesDataDataSet" msprop:Generator_UserDSName="TransferFilesDataDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TransferFilesDataTable" msprop:Generator_TableClassName="TransferFilesDataTableDataTable" msprop:Generator_TableVarName="tableTransferFilesDataTable" msprop:Generator_RowChangedName="TransferFilesDataTableRowChanged" msprop:Generator_TablePropName="TransferFilesDataTable" msprop:Generator_RowDeletingName="TransferFilesDataTableRowDeleting" msprop:Generator_RowChangingName="TransferFilesDataTableRowChanging" msprop:Generator_RowEvHandlerName="TransferFilesDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="TransferFilesDataTableRowDeleted" msprop:Generator_RowClassName="TransferFilesDataTableRow" msprop:Generator_UserTableName="TransferFilesDataTable" msprop:Generator_RowEvArgName="TransferFilesDataTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="GeneratedTransferNo" msprop:Generator_ColumnVarNameInTable="columnGeneratedTransferNo" msprop:Generator_ColumnPropNameInRow="GeneratedTransferNo" msprop:Generator_ColumnPropNameInTable="GeneratedTransferNoColumn" msprop:Generator_UserColumnName="GeneratedTransferNo" type="xs:string" minOccurs="0" />
+              <xs:element name="FileType" msprop:Generator_ColumnVarNameInTable="columnFileType" msprop:Generator_ColumnPropNameInRow="FileType" msprop:Generator_ColumnPropNameInTable="FileTypeColumn" msprop:Generator_UserColumnName="FileType" type="xs:string" minOccurs="0" />
+              <xs:element name="FileName" msprop:Generator_ColumnVarNameInTable="columnFileName" msprop:Generator_ColumnPropNameInRow="FileName" msprop:Generator_ColumnPropNameInTable="FileNameColumn" msprop:Generator_UserColumnName="FileName" type="xs:string" minOccurs="0" />
+              <xs:element name="GeneratedFileName" msprop:Generator_ColumnVarNameInTable="columnGeneratedFileName" msprop:Generator_ColumnPropNameInRow="GeneratedFileName" msprop:Generator_ColumnPropNameInTable="GeneratedFileNameColumn" msprop:Generator_UserColumnName="GeneratedFileName" type="xs:string" minOccurs="0" />
+              <xs:element name="FileStatus" msprop:Generator_ColumnVarNameInTable="columnFileStatus" msprop:Generator_ColumnPropNameInRow="FileStatus" msprop:Generator_ColumnPropNameInTable="FileStatusColumn" msprop:Generator_UserColumnName="FileStatus" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="RegDate" msprop:Generator_ColumnVarNameInTable="columnRegDate" msprop:Generator_ColumnPropNameInRow="RegDate" msprop:Generator_ColumnPropNameInTable="RegDateColumn" msprop:Generator_UserColumnName="RegDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="InputtedBy" msprop:Generator_ColumnVarNameInTable="columnInputtedBy" msprop:Generator_ColumnPropNameInRow="InputtedBy" msprop:Generator_ColumnPropNameInTable="InputtedByColumn" msprop:Generator_UserColumnName="InputtedBy" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

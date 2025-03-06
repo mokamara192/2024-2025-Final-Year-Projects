@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ItemCategoriesDataSet" targetNamespace="http://tempuri.org/ItemCategoriesDataSet.xsd" xmlns:mstns="http://tempuri.org/ItemCategoriesDataSet.xsd" xmlns="http://tempuri.org/ItemCategoriesDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ItemCategoriesTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ItemCategoriesDataSet" msprop:Generator_UserDSName="ItemCategoriesDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ItemCategoriesTable" msprop:Generator_TableClassName="ItemCategoriesTableDataTable" msprop:Generator_TableVarName="tableItemCategoriesTable" msprop:Generator_RowChangedName="ItemCategoriesTableRowChanged" msprop:Generator_TablePropName="ItemCategoriesTable" msprop:Generator_RowDeletingName="ItemCategoriesTableRowDeleting" msprop:Generator_RowChangingName="ItemCategoriesTableRowChanging" msprop:Generator_RowEvHandlerName="ItemCategoriesTableRowChangeEventHandler" msprop:Generator_RowDeletedName="ItemCategoriesTableRowDeleted" msprop:Generator_RowClassName="ItemCategoriesTableRow" msprop:Generator_UserTableName="ItemCategoriesTable" msprop:Generator_RowEvArgName="ItemCategoriesTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemCategory" msprop:Generator_ColumnVarNameInTable="columnItemCategory" msprop:Generator_ColumnPropNameInRow="ItemCategory" msprop:Generator_ColumnPropNameInTable="ItemCategoryColumn" msprop:Generator_UserColumnName="ItemCategory" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

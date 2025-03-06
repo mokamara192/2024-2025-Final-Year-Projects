@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RetailUnitsOfMeasurementDataSet" targetNamespace="http://tempuri.org/RetailUnitsOfMeasurementDataSet.xsd" xmlns:mstns="http://tempuri.org/RetailUnitsOfMeasurementDataSet.xsd" xmlns="http://tempuri.org/RetailUnitsOfMeasurementDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RetailUnitsOfMeasurementTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="RetailUnitsOfMeasurementDataSet" msprop:Generator_UserDSName="RetailUnitsOfMeasurementDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RetailUnitsOfMeasurementTable" msprop:Generator_TableClassName="RetailUnitsOfMeasurementTableDataTable" msprop:Generator_TableVarName="tableRetailUnitsOfMeasurementTable" msprop:Generator_RowChangedName="RetailUnitsOfMeasurementTableRowChanged" msprop:Generator_TablePropName="RetailUnitsOfMeasurementTable" msprop:Generator_RowDeletingName="RetailUnitsOfMeasurementTableRowDeleting" msprop:Generator_RowChangingName="RetailUnitsOfMeasurementTableRowChanging" msprop:Generator_RowEvHandlerName="RetailUnitsOfMeasurementTableRowChangeEventHandler" msprop:Generator_RowDeletedName="RetailUnitsOfMeasurementTableRowDeleted" msprop:Generator_RowClassName="RetailUnitsOfMeasurementTableRow" msprop:Generator_UserTableName="RetailUnitsOfMeasurementTable" msprop:Generator_RowEvArgName="RetailUnitsOfMeasurementTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RetailUnitOfMeasurement" msprop:Generator_ColumnVarNameInTable="columnRetailUnitOfMeasurement" msprop:Generator_ColumnPropNameInRow="RetailUnitOfMeasurement" msprop:Generator_ColumnPropNameInTable="RetailUnitOfMeasurementColumn" msprop:Generator_UserColumnName="RetailUnitOfMeasurement" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

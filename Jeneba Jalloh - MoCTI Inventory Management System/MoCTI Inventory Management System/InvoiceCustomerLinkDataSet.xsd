@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TransferOfficeLinkDataSet" targetNamespace="http://tempuri.org/TransferOfficeLinkDataSet.xsd" xmlns:mstns="http://tempuri.org/TransferOfficeLinkDataSet.xsd" xmlns="http://tempuri.org/TransferOfficeLinkDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TransferOfficeLinkTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TransferOfficeLinkDataSet" msprop:Generator_UserDSName="TransferOfficeLinkDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TransferOfficeLinkTable" msprop:Generator_TableClassName="TransferOfficeLinkTableDataTable" msprop:Generator_TableVarName="tableTransferOfficeLinkTable" msprop:Generator_RowChangedName="TransferOfficeLinkTableRowChanged" msprop:Generator_TablePropName="TransferOfficeLinkTable" msprop:Generator_RowDeletingName="TransferOfficeLinkTableRowDeleting" msprop:Generator_RowChangingName="TransferOfficeLinkTableRowChanging" msprop:Generator_RowEvHandlerName="TransferOfficeLinkTableRowChangeEventHandler" msprop:Generator_RowDeletedName="TransferOfficeLinkTableRowDeleted" msprop:Generator_RowClassName="TransferOfficeLinkTableRow" msprop:Generator_UserTableName="TransferOfficeLinkTable" msprop:Generator_RowEvArgName="TransferOfficeLinkTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransferOfficeID" msprop:Generator_ColumnVarNameInTable="columnTransferOfficeID" msprop:Generator_ColumnPropNameInRow="TransferOfficeID" msprop:Generator_ColumnPropNameInTable="TransferOfficeIDColumn" msprop:Generator_UserColumnName="TransferOfficeID" type="xs:int" minOccurs="0" />
+              <xs:element name="GeneratedTransferNo" msprop:Generator_ColumnVarNameInTable="columnGeneratedTransferNo" msprop:Generator_ColumnPropNameInRow="GeneratedTransferNo" msprop:Generator_ColumnPropNameInTable="GeneratedTransferNoColumn" msprop:Generator_UserColumnName="GeneratedTransferNo" type="xs:string" minOccurs="0" />
+              <xs:element name="OfficeID" msprop:Generator_ColumnVarNameInTable="columnOfficeID" msprop:Generator_ColumnPropNameInRow="OfficeID" msprop:Generator_ColumnPropNameInTable="OfficeIDColumn" msprop:Generator_UserColumnName="OfficeID" type="xs:string" minOccurs="0" />
+              <xs:element name="RegDate" msprop:Generator_ColumnVarNameInTable="columnRegDate" msprop:Generator_ColumnPropNameInRow="RegDate" msprop:Generator_ColumnPropNameInTable="RegDateColumn" msprop:Generator_UserColumnName="RegDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="InputedBy" msprop:Generator_ColumnVarNameInTable="columnInputedBy" msprop:Generator_ColumnPropNameInRow="InputedBy" msprop:Generator_ColumnPropNameInTable="InputedByColumn" msprop:Generator_UserColumnName="InputedBy" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="IdentificationTypesDataSet" targetNamespace="http://tempuri.org/IdentificationTypesDataSet.xsd" xmlns:mstns="http://tempuri.org/IdentificationTypesDataSet.xsd" xmlns="http://tempuri.org/IdentificationTypesDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="IdentificationTypesTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="IdentificationTypesDataSet" msprop:Generator_UserDSName="IdentificationTypesDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="IdentificationTypesTable" msprop:Generator_TableClassName="IdentificationTypesTableDataTable" msprop:Generator_TableVarName="tableIdentificationTypesTable" msprop:Generator_RowChangedName="IdentificationTypesTableRowChanged" msprop:Generator_TablePropName="IdentificationTypesTable" msprop:Generator_RowDeletingName="IdentificationTypesTableRowDeleting" msprop:Generator_RowChangingName="IdentificationTypesTableRowChanging" msprop:Generator_RowEvHandlerName="IdentificationTypesTableRowChangeEventHandler" msprop:Generator_RowDeletedName="IdentificationTypesTableRowDeleted" msprop:Generator_RowClassName="IdentificationTypesTableRow" msprop:Generator_UserTableName="IdentificationTypesTable" msprop:Generator_RowEvArgName="IdentificationTypesTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdentificationType" msprop:Generator_ColumnVarNameInTable="columnIdentificationType" msprop:Generator_ColumnPropNameInRow="IdentificationType" msprop:Generator_ColumnPropNameInTable="IdentificationTypeColumn" msprop:Generator_UserColumnName="IdentificationType" type="xs:string" minOccurs="0" />
+              <xs:element name="RegDate" msprop:Generator_ColumnVarNameInTable="columnRegDate" msprop:Generator_ColumnPropNameInRow="RegDate" msprop:Generator_ColumnPropNameInTable="RegDateColumn" msprop:Generator_UserColumnName="RegDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="InputtedBy" msprop:Generator_ColumnVarNameInTable="columnInputtedBy" msprop:Generator_ColumnPropNameInRow="InputtedBy" msprop:Generator_ColumnPropNameInTable="InputtedByColumn" msprop:Generator_UserColumnName="InputtedBy" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="View_GeneralSalesDataSet" targetNamespace="http://tempuri.org/View_GeneralSalesDataSet.xsd" xmlns:mstns="http://tempuri.org/View_GeneralSalesDataSet.xsd" xmlns="http://tempuri.org/View_GeneralSalesDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="MoCTIMISConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MoCTIMISConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MoCTIMIS.My.MySettings.GlobalReference.Default.MoCTIMISConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_GeneralSalesTableAdapter" GeneratorDataComponentClassName="View_GeneralSalesTableAdapter" Name="View_GeneralSales" UserDataComponentName="View_GeneralSalesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MoCTIMISConnectionString (MySettings)" DbObjectName="MoCTIMIS.dbo.View_GeneralSales" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM View_GeneralSales</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ItemID" DataSetColumn="ItemID" />
+              <Mapping SourceColumn="GPaymentID" DataSetColumn="GPaymentID" />
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+              <Mapping SourceColumn="UnitCost" DataSetColumn="UnitCost" />
+              <Mapping SourceColumn="TotalCost" DataSetColumn="TotalCost" />
+              <Mapping SourceColumn="UnitOfMeasurement" DataSetColumn="UnitOfMeasurement" />
+              <Mapping SourceColumn="SalesCategory" DataSetColumn="SalesCategory" />
+              <Mapping SourceColumn="RegDate" DataSetColumn="RegDate" />
+              <Mapping SourceColumn="NameOfItem" DataSetColumn="NameOfItem" />
+              <Mapping SourceColumn="ItemCategory" DataSetColumn="ItemCategory" />
+              <Mapping SourceColumn="StockID" DataSetColumn="StockID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="View_GeneralSalesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="View_GeneralSalesDataSet" msprop:Generator_UserDSName="View_GeneralSalesDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_GeneralSales" msprop:Generator_TableClassName="View_GeneralSalesDataTable" msprop:Generator_TableVarName="tableView_GeneralSales" msprop:Generator_RowChangedName="View_GeneralSalesRowChanged" msprop:Generator_TablePropName="View_GeneralSales" msprop:Generator_RowDeletingName="View_GeneralSalesRowDeleting" msprop:Generator_RowChangingName="View_GeneralSalesRowChanging" msprop:Generator_RowEvHandlerName="View_GeneralSalesRowChangeEventHandler" msprop:Generator_RowDeletedName="View_GeneralSalesRowDeleted" msprop:Generator_RowClassName="View_GeneralSalesRow" msprop:Generator_UserTableName="View_GeneralSales" msprop:Generator_RowEvArgName="View_GeneralSalesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemID" msprop:Generator_ColumnVarNameInTable="columnItemID" msprop:Generator_ColumnPropNameInRow="ItemID" msprop:Generator_ColumnPropNameInTable="ItemIDColumn" msprop:Generator_UserColumnName="ItemID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GPaymentID" msprop:Generator_ColumnVarNameInTable="columnGPaymentID" msprop:Generator_ColumnPropNameInRow="GPaymentID" msprop:Generator_ColumnPropNameInTable="GPaymentIDColumn" msprop:Generator_UserColumnName="GPaymentID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:decimal" />
+              <xs:element name="UnitCost" msprop:Generator_ColumnVarNameInTable="columnUnitCost" msprop:Generator_ColumnPropNameInRow="UnitCost" msprop:Generator_ColumnPropNameInTable="UnitCostColumn" msprop:Generator_UserColumnName="UnitCost" type="xs:decimal" />
+              <xs:element name="TotalCost" msprop:Generator_ColumnVarNameInTable="columnTotalCost" msprop:Generator_ColumnPropNameInRow="TotalCost" msprop:Generator_ColumnPropNameInTable="TotalCostColumn" msprop:Generator_UserColumnName="TotalCost" type="xs:decimal" />
+              <xs:element name="UnitOfMeasurement" msprop:Generator_ColumnVarNameInTable="columnUnitOfMeasurement" msprop:Generator_ColumnPropNameInRow="UnitOfMeasurement" msprop:Generator_ColumnPropNameInTable="UnitOfMeasurementColumn" msprop:Generator_UserColumnName="UnitOfMeasurement">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SalesCategory" msprop:Generator_ColumnVarNameInTable="columnSalesCategory" msprop:Generator_ColumnPropNameInRow="SalesCategory" msprop:Generator_ColumnPropNameInTable="SalesCategoryColumn" msprop:Generator_UserColumnName="SalesCategory">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RegDate" msprop:Generator_ColumnVarNameInTable="columnRegDate" msprop:Generator_ColumnPropNameInRow="RegDate" msprop:Generator_ColumnPropNameInTable="RegDateColumn" msprop:Generator_UserColumnName="RegDate" type="xs:dateTime" />
+              <xs:element name="NameOfItem" msprop:Generator_ColumnVarNameInTable="columnNameOfItem" msprop:Generator_ColumnPropNameInRow="NameOfItem" msprop:Generator_ColumnPropNameInTable="NameOfItemColumn" msprop:Generator_UserColumnName="NameOfItem">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemCategory" msprop:Generator_ColumnVarNameInTable="columnItemCategory" msprop:Generator_ColumnPropNameInRow="ItemCategory" msprop:Generator_ColumnPropNameInTable="ItemCategoryColumn" msprop:Generator_UserColumnName="ItemCategory">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StockID" msprop:Generator_ColumnVarNameInTable="columnStockID" msprop:Generator_ColumnPropNameInRow="StockID" msprop:Generator_ColumnPropNameInTable="StockIDColumn" msprop:Generator_UserColumnName="StockID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_GeneralSales" />
+      <xs:field xpath="mstns:ItemID" />
+      <xs:field xpath="mstns:StockID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

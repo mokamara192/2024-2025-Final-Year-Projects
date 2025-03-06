@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CompanySettingDataSet" targetNamespace="http://tempuri.org/CompanySettingDataSet.xsd" xmlns:mstns="http://tempuri.org/CompanySettingDataSet.xsd" xmlns="http://tempuri.org/CompanySettingDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CompanySettingDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CompanySettingDataSet" msprop:Generator_UserDSName="CompanySettingDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CompanySettingDataTable" msprop:Generator_TableClassName="CompanySettingDataTableDataTable" msprop:Generator_TableVarName="tableCompanySettingDataTable" msprop:Generator_TablePropName="CompanySettingDataTable" msprop:Generator_RowDeletingName="CompanySettingDataTableRowDeleting" msprop:Generator_RowChangingName="CompanySettingDataTableRowChanging" msprop:Generator_RowEvHandlerName="CompanySettingDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="CompanySettingDataTableRowDeleted" msprop:Generator_UserTableName="CompanySettingDataTable" msprop:Generator_RowChangedName="CompanySettingDataTableRowChanged" msprop:Generator_RowEvArgName="CompanySettingDataTableRowChangeEvent" msprop:Generator_RowClassName="CompanySettingDataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CompanyID" msprop:Generator_ColumnVarNameInTable="columnCompanyID" msprop:Generator_ColumnPropNameInRow="CompanyID" msprop:Generator_ColumnPropNameInTable="CompanyIDColumn" msprop:Generator_UserColumnName="CompanyID" type="xs:string" />
+              <xs:element name="NameofCompany" msprop:Generator_ColumnVarNameInTable="columnNameofCompany" msprop:Generator_ColumnPropNameInRow="NameofCompany" msprop:Generator_ColumnPropNameInTable="NameofCompanyColumn" msprop:Generator_UserColumnName="NameofCompany" type="xs:string" minOccurs="0" />
+              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address" type="xs:string" minOccurs="0" />
+              <xs:element name="PhoneNo" msprop:Generator_ColumnVarNameInTable="columnPhoneNo" msprop:Generator_ColumnPropNameInRow="PhoneNo" msprop:Generator_ColumnPropNameInTable="PhoneNoColumn" msprop:Generator_UserColumnName="PhoneNo" type="xs:string" minOccurs="0" />
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnPropNameInTable="LogoColumn" msprop:Generator_UserColumnName="Logo" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CompanySettingDataTable" />
+      <xs:field xpath="mstns:CompanyID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

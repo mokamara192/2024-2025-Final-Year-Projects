@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BranchDataSet" targetNamespace="http://tempuri.org/BranchDataSet.xsd" xmlns:mstns="http://tempuri.org/BranchDataSet.xsd" xmlns="http://tempuri.org/BranchDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BranchTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BranchDataSet" msprop:Generator_UserDSName="BranchDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BranchTable" msprop:Generator_TableClassName="BranchTableDataTable" msprop:Generator_TableVarName="tableBranchTable" msprop:Generator_RowChangedName="BranchTableRowChanged" msprop:Generator_TablePropName="BranchTable" msprop:Generator_RowDeletingName="BranchTableRowDeleting" msprop:Generator_RowChangingName="BranchTableRowChanging" msprop:Generator_RowEvHandlerName="BranchTableRowChangeEventHandler" msprop:Generator_RowDeletedName="BranchTableRowDeleted" msprop:Generator_RowClassName="BranchTableRow" msprop:Generator_UserTableName="BranchTable" msprop:Generator_RowEvArgName="BranchTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BranchID" msprop:Generator_ColumnVarNameInTable="columnBranchID" msprop:Generator_ColumnPropNameInRow="BranchID" msprop:Generator_ColumnPropNameInTable="BranchIDColumn" msprop:Generator_UserColumnName="BranchID" type="xs:int" minOccurs="0" />
+              <xs:element name="BranchName" msprop:Generator_ColumnVarNameInTable="columnBranchName" msprop:Generator_ColumnPropNameInRow="BranchName" msprop:Generator_ColumnPropNameInTable="BranchNameColumn" msprop:Generator_UserColumnName="BranchName" type="xs:string" minOccurs="0" />
+              <xs:element name="BranchCity" msprop:Generator_ColumnVarNameInTable="columnBranchCity" msprop:Generator_ColumnPropNameInRow="BranchCity" msprop:Generator_ColumnPropNameInTable="BranchCityColumn" msprop:Generator_UserColumnName="BranchCity" type="xs:string" minOccurs="0" />
+              <xs:element name="BranchAddress" msprop:Generator_ColumnVarNameInTable="columnBranchAddress" msprop:Generator_ColumnPropNameInRow="BranchAddress" msprop:Generator_ColumnPropNameInTable="BranchAddressColumn" msprop:Generator_UserColumnName="BranchAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="BranchPhoneNo" msprop:Generator_ColumnVarNameInTable="columnBranchPhoneNo" msprop:Generator_ColumnPropNameInRow="BranchPhoneNo" msprop:Generator_ColumnPropNameInTable="BranchPhoneNoColumn" msprop:Generator_UserColumnName="BranchPhoneNo" type="xs:string" minOccurs="0" />
+              <xs:element name="RegDate" msprop:Generator_ColumnVarNameInTable="columnRegDate" msprop:Generator_ColumnPropNameInRow="RegDate" msprop:Generator_ColumnPropNameInTable="RegDateColumn" msprop:Generator_UserColumnName="RegDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="InputedBy" msprop:Generator_ColumnVarNameInTable="columnInputedBy" msprop:Generator_ColumnPropNameInRow="InputedBy" msprop:Generator_ColumnPropNameInTable="InputedByColumn" msprop:Generator_UserColumnName="InputedBy" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

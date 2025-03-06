@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GeneralSalesDataSet" targetNamespace="http://tempuri.org/GeneralSalesDataSet.xsd" xmlns:mstns="http://tempuri.org/GeneralSalesDataSet.xsd" xmlns="http://tempuri.org/GeneralSalesDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="MoCTIMISConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MoCTIMISConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MoCTIMIS.My.MySettings.GlobalReference.Default.MoCTIMISConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GeneralSalesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="GeneralSalesDataSet" msprop:Generator_UserDSName="GeneralSalesDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GeneralSales" msprop:Generator_TableClassName="GeneralSalesDataTable" msprop:Generator_TableVarName="tableGeneralSales" msprop:Generator_RowChangedName="GeneralSalesRowChanged" msprop:Generator_TablePropName="GeneralSales" msprop:Generator_RowDeletingName="GeneralSalesRowDeleting" msprop:Generator_RowChangingName="GeneralSalesRowChanging" msprop:Generator_RowEvHandlerName="GeneralSalesRowChangeEventHandler" msprop:Generator_RowDeletedName="GeneralSalesRowDeleted" msprop:Generator_RowClassName="GeneralSalesRow" msprop:Generator_UserTableName="GeneralSales" msprop:Generator_RowEvArgName="GeneralSalesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GPaymentID" msprop:Generator_ColumnVarNameInTable="columnGPaymentID" msprop:Generator_ColumnPropNameInRow="GPaymentID" msprop:Generator_ColumnPropNameInTable="GPaymentIDColumn" msprop:Generator_UserColumnName="GPaymentID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OutgoneSales" msprop:Generator_ColumnVarNameInTable="columnOutgoneSales" msprop:Generator_ColumnPropNameInRow="OutgoneSales" msprop:Generator_ColumnPropNameInTable="OutgoneSalesColumn" msprop:Generator_UserColumnName="OutgoneSales" type="xs:boolean" />
+              <xs:element name="PaidBy" msprop:Generator_ColumnVarNameInTable="columnPaidBy" msprop:Generator_ColumnPropNameInRow="PaidBy" msprop:Generator_ColumnPropNameInTable="PaidByColumn" msprop:Generator_UserColumnName="PaidBy">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PaymentDate" msprop:Generator_ColumnVarNameInTable="columnPaymentDate" msprop:Generator_ColumnPropNameInRow="PaymentDate" msprop:Generator_ColumnPropNameInTable="PaymentDateColumn" msprop:Generator_UserColumnName="PaymentDate" type="xs:dateTime" />
+              <xs:element name="TotalAmount" msprop:Generator_ColumnVarNameInTable="columnTotalAmount" msprop:Generator_ColumnPropNameInRow="TotalAmount" msprop:Generator_ColumnPropNameInTable="TotalAmountColumn" msprop:Generator_UserColumnName="TotalAmount" type="xs:decimal" />
+              <xs:element name="AmountPaid" msprop:Generator_ColumnVarNameInTable="columnAmountPaid" msprop:Generator_ColumnPropNameInRow="AmountPaid" msprop:Generator_ColumnPropNameInTable="AmountPaidColumn" msprop:Generator_UserColumnName="AmountPaid" type="xs:decimal" />
+              <xs:element name="Balance" msprop:Generator_ColumnVarNameInTable="columnBalance" msprop:Generator_ColumnPropNameInRow="Balance" msprop:Generator_ColumnPropNameInTable="BalanceColumn" msprop:Generator_UserColumnName="Balance" type="xs:decimal" />
+              <xs:element name="Comment" msprop:Generator_ColumnVarNameInTable="columnComment" msprop:Generator_ColumnPropNameInRow="Comment" msprop:Generator_ColumnPropNameInTable="CommentColumn" msprop:Generator_UserColumnName="Comment">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransactionPosted" msprop:Generator_ColumnVarNameInTable="columnTransactionPosted" msprop:Generator_ColumnPropNameInRow="TransactionPosted" msprop:Generator_ColumnPropNameInTable="TransactionPostedColumn" msprop:Generator_UserColumnName="TransactionPosted" type="xs:boolean" />
+              <xs:element name="RegDate" msprop:Generator_ColumnVarNameInTable="columnRegDate" msprop:Generator_ColumnPropNameInRow="RegDate" msprop:Generator_ColumnPropNameInTable="RegDateColumn" msprop:Generator_UserColumnName="RegDate" type="xs:dateTime" />
+              <xs:element name="InputedBy" msprop:Generator_ColumnVarNameInTable="columnInputedBy" msprop:Generator_ColumnPropNameInRow="InputedBy" msprop:Generator_ColumnPropNameInTable="InputedByColumn" msprop:Generator_UserColumnName="InputedBy">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RowNumber" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnRowNumber" msprop:Generator_ColumnPropNameInRow="RowNumber" msprop:Generator_ColumnPropNameInTable="RowNumberColumn" msprop:Generator_UserColumnName="RowNumber" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GeneralSales" />
+      <xs:field xpath="mstns:GPaymentID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

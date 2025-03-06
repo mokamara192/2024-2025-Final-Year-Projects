@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="tblUserLogDataSet" targetNamespace="http://tempuri.org/tblUserLogDataSet.xsd" xmlns:mstns="http://tempuri.org/tblUserLogDataSet.xsd" xmlns="http://tempuri.org/tblUserLogDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="tblUserLogTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="tblUserLogDataSet" msprop:Generator_UserDSName="tblUserLogDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblUserLogTable" msprop:Generator_TableClassName="tblUserLogTableDataTable" msprop:Generator_TableVarName="tabletblUserLogTable" msprop:Generator_RowChangedName="tblUserLogTableRowChanged" msprop:Generator_TablePropName="tblUserLogTable" msprop:Generator_RowDeletingName="tblUserLogTableRowDeleting" msprop:Generator_RowChangingName="tblUserLogTableRowChanging" msprop:Generator_RowEvHandlerName="tblUserLogTableRowChangeEventHandler" msprop:Generator_RowDeletedName="tblUserLogTableRowDeleted" msprop:Generator_RowClassName="tblUserLogTableRow" msprop:Generator_UserTableName="tblUserLogTable" msprop:Generator_RowEvArgName="tblUserLogTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LogID" msprop:Generator_ColumnVarNameInTable="columnLogID" msprop:Generator_ColumnPropNameInRow="LogID" msprop:Generator_ColumnPropNameInTable="LogIDColumn" msprop:Generator_UserColumnName="LogID" type="xs:int" minOccurs="0" />
+              <xs:element name="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:string" minOccurs="0" />
+              <xs:element name="LogDate" msprop:Generator_ColumnVarNameInTable="columnLogDate" msprop:Generator_ColumnPropNameInRow="LogDate" msprop:Generator_ColumnPropNameInTable="LogDateColumn" msprop:Generator_UserColumnName="LogDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" type="xs:string" minOccurs="0" />
+              <xs:element name="FullName" msprop:Generator_ColumnVarNameInTable="columnFullName" msprop:Generator_ColumnPropNameInRow="FullName" msprop:Generator_ColumnPropNameInTable="FullNameColumn" msprop:Generator_UserColumnName="FullName" type="xs:string" minOccurs="0" />
+              <xs:element name="Activity" msprop:Generator_ColumnVarNameInTable="columnActivity" msprop:Generator_ColumnPropNameInRow="Activity" msprop:Generator_ColumnPropNameInTable="ActivityColumn" msprop:Generator_UserColumnName="Activity" type="xs:string" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ActivityTime" msprop:Generator_ColumnVarNameInTable="columnActivityTime" msprop:Generator_ColumnPropNameInRow="ActivityTime" msprop:Generator_ColumnPropNameInTable="ActivityTimeColumn" msprop:Generator_UserColumnName="ActivityTime" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

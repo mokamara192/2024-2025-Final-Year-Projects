@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ProgramUpdatesDataSet" targetNamespace="http://tempuri.org/ProgramUpdatesDataSet.xsd" xmlns:mstns="http://tempuri.org/ProgramUpdatesDataSet.xsd" xmlns="http://tempuri.org/ProgramUpdatesDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ProgramUpdatesTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ProgramUpdatesDataSet" msprop:Generator_UserDSName="ProgramUpdatesDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ProgramUpdatesTable" msprop:Generator_TableClassName="ProgramUpdatesTableDataTable" msprop:Generator_TableVarName="tableProgramUpdatesTable" msprop:Generator_RowChangedName="ProgramUpdatesTableRowChanged" msprop:Generator_TablePropName="ProgramUpdatesTable" msprop:Generator_RowDeletingName="ProgramUpdatesTableRowDeleting" msprop:Generator_RowChangingName="ProgramUpdatesTableRowChanging" msprop:Generator_RowEvHandlerName="ProgramUpdatesTableRowChangeEventHandler" msprop:Generator_RowDeletedName="ProgramUpdatesTableRowDeleted" msprop:Generator_RowClassName="ProgramUpdatesTableRow" msprop:Generator_UserTableName="ProgramUpdatesTable" msprop:Generator_RowEvArgName="ProgramUpdatesTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Version" msprop:Generator_ColumnVarNameInTable="columnVersion" msprop:Generator_ColumnPropNameInRow="Version" msprop:Generator_ColumnPropNameInTable="VersionColumn" msprop:Generator_UserColumnName="Version" type="xs:string" minOccurs="0" />
+              <xs:element name="UpdateFile" msprop:Generator_ColumnVarNameInTable="columnUpdateFile" msprop:Generator_ColumnPropNameInRow="UpdateFile" msprop:Generator_ColumnPropNameInTable="UpdateFileColumn" msprop:Generator_UserColumnName="UpdateFile" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="FileName" msprop:Generator_ColumnVarNameInTable="columnFileName" msprop:Generator_ColumnPropNameInRow="FileName" msprop:Generator_ColumnPropNameInTable="FileNameColumn" msprop:Generator_UserColumnName="FileName" type="xs:string" minOccurs="0" />
+              <xs:element name="UpdatePriority" msprop:Generator_ColumnVarNameInTable="columnUpdatePriority" msprop:Generator_ColumnPropNameInRow="UpdatePriority" msprop:Generator_ColumnPropNameInTable="UpdatePriorityColumn" msprop:Generator_UserColumnName="UpdatePriority" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="RegDate" msprop:Generator_ColumnVarNameInTable="columnRegDate" msprop:Generator_ColumnPropNameInRow="RegDate" msprop:Generator_ColumnPropNameInTable="RegDateColumn" msprop:Generator_UserColumnName="RegDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="InputtedBy" msprop:Generator_ColumnVarNameInTable="columnInputtedBy" msprop:Generator_ColumnPropNameInRow="InputtedBy" msprop:Generator_ColumnPropNameInTable="InputtedByColumn" msprop:Generator_UserColumnName="InputtedBy" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
